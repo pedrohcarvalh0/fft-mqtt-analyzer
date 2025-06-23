@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
-Versão compacta do analisador FFT com gráficos de amplitude em subplots menores
+Prencha os locais necessários com os dados do BROKER para que o programa execute da maneeira desejada
+
+Exemplo:
+        broker_host="192.168.0.103", broker_port=1883, username="admin", password="123456"):
 """
 
 import paho.mqtt.client as mqtt
@@ -16,7 +19,7 @@ from matplotlib.animation import FuncAnimation
 import queue
 
 class CompactFFTAnalyzer:
-    def __init__(self, broker_host="192.168.0.103", broker_port=1883, username="admin", password="123456"):
+    def __init__(self, broker_host="ENDEREÇO IP DO BROKER", broker_port=1883, username="USERNAME DEFINIDO NO BROKER", password="SENHA DEFINIDA NO BROKER"):
         self.broker_host = broker_host
         self.broker_port = broker_port
         self.username = username
@@ -311,11 +314,13 @@ class CompactFFTAnalyzer:
             self.client.disconnect()
             print("👋 Analisador finalizado!")
 
+""" ALTERAR AS CREDENCIAS AQUI TAMBÉM """
+
 if __name__ == "__main__":
     analyzer = CompactFFTAnalyzer(
-        broker_host="192.168.0.103",
+        broker_host="ENDEREÇO IP DO BROKER",
         broker_port=1883,
-        username="admin", 
-        password="123456"
+        username="USERNAME DEFINIDO NO BROKER",
+        password="SENHA DEFINIDA NO BROKER"
     )
     analyzer.start()
