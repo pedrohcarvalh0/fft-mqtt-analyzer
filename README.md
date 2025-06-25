@@ -6,7 +6,8 @@
 Este código Python recebe os dados publicados pelo RP2040 via MQTT, realiza o processamento, armazena e plota gráficos dinâmicos para análise das séries temporais e das FFTs de temperatura e umidade.
 
 ## Pré-requisitos
-
+- **Broker MQTT**: Um broker ativo (exemplo: Mosquitto)
+- **Configuração do broker**: https://youtu.be/UmmK6MiXOqM?si=WFZpqj1_aV5oBVlE
 - **Python 3.x**
 - **Bibliotecas Python necessárias:**
 
