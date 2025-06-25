@@ -51,7 +51,7 @@ Use o mesmo IP e credenciais do seu Broker (exemplo: `192.168.0.xxx`).
 ## Execução
 
 ```bash
-python3 fft_mqtt_analyzer.py
+python fft_mqtt_analyzer.py
 ```
 
 A interface gráfica abrirá com atualização automática dos gráficos a cada segundo.
